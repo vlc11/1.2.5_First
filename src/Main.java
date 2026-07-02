@@ -1,9 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Main obj = new Main();
-        System.out.println(obj.priceCalculation(8.50, 2));
+        calcCircleRadius (123);
     }
-    public double priceCalculation(double price, int count) {
-        return price * count;
+
+    public static void calcCircleRadius(double area) {
+        double radius = Math.sqrt(area / Math.PI);
+        System.out.printf("%.3f", radius);
     }
 }
