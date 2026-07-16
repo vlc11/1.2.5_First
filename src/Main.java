@@ -1,9 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
+        System.out.println(isWeekend("Monday"));
+        System.out.println(isWeekend("Sunday"));
     }
-
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+    public static boolean isWeekend(String weekday) {
+    switch (weekday) {
+        case "Saturday":
+        case "Sunday":
+                         return true;
+        default:
+            return false;
+    }
     }
 }
