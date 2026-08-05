@@ -1,9 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
+        int[] arr = {1, 2, 3, 4, 5};
+        printArray(arr);
+        int[] empty = {};
+        printArray(empty);
     }
-
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+    public static void printArray(int[] numbers) {
+        System.out.print("[");
+    for (int i = 0; i < numbers.length; i++) {
+        System.out.print(numbers[i]);
+        if (i < numbers.length - 1){
+            System.out.print(", ");
+        }
+    }
+        System.out.print("]");
     }
 }
