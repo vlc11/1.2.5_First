@@ -1,9 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
+        System.out.println(isPalindrome("Was it a cat I saw ?"));
     }
 
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+    public static boolean isPalindrome(String text) {
+        String clean = text.toLowerCase().replaceAll("[^a-z0-9]", "");
+        String reversed = new StringBuilder(clean).reverse().toString();
+        return clean.equals(reversed);
     }
+
 }
