@@ -1,9 +1,25 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
+    public static class Cat {
+        public void sayHello() {
+            System.out.println("Мяу!");
+        }
     }
 
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+    public static class Dog {
+        public void sayHello() {
+            System.out.println("Ав!");
+        }
+
+        public void catchCat(Cat cat) {
+            System.out.println("Кошка поймана");
+            this.sayHello();
+            cat.sayHello();
+        }
+    }
+
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        dog.catchCat(cat);
     }
 }
