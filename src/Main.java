@@ -1,9 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
-    }
+        Human h = new Human();
+        h.news = "Новости";
+        h.experience = 10;
+        h.gossip = "Слухи";
 
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+        System.out.println("news: " + h.getNews());
+        System.out.println("experience: " + h.getExperience());
+        System.out.println("gossip: " + h.getGossip());
     }
 }
