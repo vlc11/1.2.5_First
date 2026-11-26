@@ -1,9 +1,14 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.println(getAgeDiff((byte)2, (byte)5));
+    public void testExp() throws MyNewException {
+        throw new MyNewException();
     }
 
-    public static byte getAgeDiff(byte age1, byte age2) {
-        return (byte) Math.abs(age1 - age2);
+    public static void main(String[] args) {
+        Main m = new Main();
+        try {
+            m.testExp();
+        } catch (MyNewException e) {
+            System.out.println("Найдено исключение: " + e.getMessage());
+        }
     }
 }
